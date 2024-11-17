@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laundry Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "aohHQuly1ASm9Ze3V",
+        });
+      })();
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <a href="#" class="brand">Logo</a>
+      <nav>
+        <ul>
+          <li>
+            <a href="/home"><span>Home</span></a>
+          </li>
+          <li>
+            <a href="/service"><span>Service</span></a>
+          </li>
+          <li>
+            <a href="/about"><span>About Us</span></a>
+          </li>
+          <li>
+            <a href="/contact"><span>Contact Us</span></a>
+          </li>
+        </ul>
+      </nav>
+      <button>Username</button>
+      <input type="checkbox" id="menuToggle" title="" placeholder="" />
+      <label for="menuToggle" class="menu-icon">
+        <span></span> <span></span> <span></span>
+      </label>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </header>
+    <div class="hero">
+      <div class="left">
+        <h1>Contact us</h1>
+        <p>
+          From premium dry cleaning to swift wash and fold, we deliver care and
+          convenience. Schedule a pickup and rediscover the freshness of your
+          clothes today!
+        </p>
+        <button class="cta" id="scrollButton">
+          <i class="fa-solid fa-store"></i> Book a service today!
+        </button>
+      </div>
+      <div class="right">
+        <!-- <img
+          src="https://png.pngtree.com/png-clipart/20231016/original/pngtree-washing-machine-illustration-png-image_13323676.png"
+          alt="Laundry"
+        /> -->
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

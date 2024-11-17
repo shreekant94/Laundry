@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Form</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "aohHQuly1ASm9Ze3V",
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        debugger;
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // these IDs from the previous steps
+            emailjs.sendForm("service_spau1jo", "template_7qe20vs", this).then(
+              () => {
+                console.log("SUCCESS!");
+              },
+              (error) => {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
+  </head>
+  <body>
+    <form id="contact-form">
+      <!-- To simplify the tutorial, the value is static. -->
+      <input type="hidden" name="contact_number" value="697483" />
+      <label>Name</label>
+      <input type="text" name="to_name" />
+      <label>Email</label>
+      <input type="email" name="reply_to" />
+      <label>Message</label>
+      <textarea name="message"></textarea>
+      <input type="submit" value="Send" />
+    </form>
+  </body>
+</html>
